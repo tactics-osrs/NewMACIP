@@ -4,13 +4,31 @@ This is a simple batch script for Windows that provides a menu-driven interface 
 
 ## Features
 
-1. **Display MAC and IP Address**: This option will display your current MAC and IP address using the `ipconfig /all` command.
+1. **Display MAC and IP Address**: This option will display your current MAC and IP address using the 'ipconfig /all' command.
 
-2. **Release and Renew IP Address**: This option will release your current IP address and then renew it using the `ipconfig /release` and `ipconfig /renew` commands. This is often used to resolve network issues or to get a new IP address from your DHCP server.
+2. **Release and Renew IP Address**: This option will release your current IP address and then renew it. This is often used to resolve network issues or to get a new IP address from your DHCP server. It uses the 'ipconfig /release' and 'ipconfig /renew' commands.
 
-3. **Change MAC Address**: This option will change your MAC address. You will need to enter your Interface Name and the new MAC address you want to use. The new MAC address should be in the format XX-XX-XX-XX-XX-XX, where each X is a hexadecimal digit.
+3. **Change MAC Address**: This option will change your MAC address. You will need to enter your Interface Name and the new MAC address you want to use. The new MAC address should be in the format XX-XX-XX-XX-XX-XX, where each X is a hexadecimal digit. It uses the 'netsh interface set interface' command.
 
-4. **Help**: This option will display a comprehensive breakdown of the features provided.
+4. **Help**: This option will display a comprehensive breakdown of the features provided in the code. It includes detailed explanations of each option and the commands they use.
+```batch
+:help
+cls
+echo Help:
+echo.
+echo 1. Display MAC and IP Address: This option will display your current MAC and IP address using the 'ipconfig /all' command.
+echo.
+echo 2. Release and Renew IP Address: This option will release your current IP address and then renew it. This is often used to resolve network issues or to get a new IP address from your DHCP server. It uses the 'ipconfig /release' and 'ipconfig /renew' commands.
+echo.
+echo 3. Change MAC Address: This option will change your MAC address. You will need to enter your Interface Name and the new MAC address you want to use. The new MAC address should be in the format XX-XX-XX-XX-XX-XX, where each X is a hexadecimal digit. It uses the 'netsh interface set interface' command.
+echo.
+echo 4. Help: Displays this help information.
+echo.
+echo 5. Exit: Exits the script.
+echo.
+pause
+goto menu
+```
 
 ## Usage
 
