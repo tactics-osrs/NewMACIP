@@ -23,6 +23,18 @@ goto menu
 cls
 echo Displaying MAC and IP Address...
 ipconfig /all
+echo.
+echo Help for MAC and IP Address location:
+echo.
+echo Look for the section that corresponds to the network interface you're interested in (e.g., 'Ethernet adapter Ethernet').
+echo.
+echo - 'IPv4 Address' is your computer's IP address on your local network.
+echo - 'Physical Address' is your computer's MAC address.
+echo - 'Description' is the name of the network interface.
+echo - 'DHCP Enabled' tells you whether your computer is getting its IP address from a DHCP server (usually your router).
+echo - 'Default Gateway' is the IP address of your router or other gateway device.
+echo - 'DNS Servers' are the IP addresses of the DNS servers your computer is using.
+echo.
 pause
 goto menu
 
