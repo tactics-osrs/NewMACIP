@@ -62,9 +62,13 @@ cls
 echo Help:
 echo.
 echo 1. Interface Name: This is the name of your network interface. You can find it in the Network Connections control panel.
+echo.
 echo 2. New MAC Address: This is the new MAC address you want to use. It should be in the format XX-XX-XX-XX-XX-XX, where each X is a hexadecimal digit.
+echo.
 echo 3. New IP Address: This is the new IP address you want to use. It should be in the format X.X.X.X, where each X is a number from 0 to 255.
+echo.
 echo 4. Subnet Mask: This is the subnet mask for your network. It is typically 255.255.255.0 for home networks.
+echo.
 echo 5. Gateway IP Address: This is the IP address of your network's gateway, typically your router's IP address.
 echo.
 pause
