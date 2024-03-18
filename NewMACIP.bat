@@ -4,17 +4,26 @@ setlocal
 :menu
 cls
 echo.
-echo 1. Change MAC Address
-echo 2. Change IP Address
-echo 3. Help
-echo 4. Exit
+echo 1. Display MAC and IP Address
+echo 2. Release and Renew IP Address
+echo 3. Change MAC Address
+echo 4. Help
+echo 5. Exit
 echo.
 set /p choice=Enter your choice: 
 
-if "%choice%"=="1" goto change_mac
-if "%choice%"=="2" goto change_ip
-if "%choice%"=="3" goto help
-if "%choice%"=="4" goto end
+if "%choice%"=="1" goto display_info
+if "%choice%"=="2" goto release_renew
+if "%choice%"=="3" goto change_mac
+if "%choice%"=="4" goto help
+if "%choice%"=="5" goto end
+goto menu
+
+:display_info
+cls
+echo Displaying MAC and IP Address...
+ipconfig /all
+pause
 goto menu
 
 :change_mac
@@ -33,18 +42,15 @@ if /i "%proceed%"=="yes" (
 pause
 goto menu
 
-:change_ip
+:release_renew
 cls
-echo You are about to change your IP address, which cannot be undone.
+echo You are about to release and renew your IP address.
 set /p proceed=Are you sure? (yes/no): 
 if /i "%proceed%"=="yes" (
-    echo Changing IP Address...
-    set /p interface=Enter your Interface Name: 
-    set /p ip=Enter your New IP Address: 
-    set /p mask=Enter your Subnet Mask: 
-    set /p gateway=Enter your Gateway IP Address: 
-    netsh interface ipv4 set address name="%interface%" static %ip% %mask% %gateway%
-    echo IP Address changed.
+    echo Releasing and renewing IP Address...
+    ipconfig /release
+    ipconfig /renew
+    echo IP Address released and renewed.
 ) else (
     echo Operation cancelled.
 )
