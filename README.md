@@ -10,7 +10,7 @@ This is a simple batch script for Windows that provides a menu-driven interface 
 
 3. **Change MAC Address**: This option will change your MAC address. You will need to enter your Interface Name and the new MAC address you want to use. The new MAC address should be in the format XX-XX-XX-XX-XX-XX, where each X is a hexadecimal digit.
 
-4. **Help**: This option will display a comprehensive understanding of each feature. I.E. Explaining what/where to find Interface name, Subnet mask, IP Address etc.
+4. **Help**: This option will display a comprehensive breakdown of the features provided.
 
 ## Usage
 
